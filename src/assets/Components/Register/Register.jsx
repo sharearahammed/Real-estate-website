@@ -3,6 +3,8 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Authconfiguration/Authconfiguration";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -49,6 +51,8 @@ const Register = () => {
         .then(result =>{
             console.log(result.user)
             setSuccess('User Created Successfully')
+            toast.success("User Create Successfully")
+            
             // Update profile
             updateProfile(result.user,{
               displayName: name,
@@ -80,11 +84,11 @@ const Register = () => {
               <label className="text-sm mb-2 block">Email</label>
               <input name="email" type="text" className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" placeholder="Enter email" />
             </div>
-            <div>
+            <div className="relative">
               <label className="text-sm mb-2 block">Password</label>
-              <input className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" 
+              <input className="  bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" 
               type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required />
-                <span className="absolute top-2 right-2" onClick={() => setShowPassword(!showPassword)}>
+                <span className="absolute top-11 right-2" onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
                     </span>
               </div>
@@ -110,13 +114,12 @@ const Register = () => {
           </div>
         </form>
         <p className="text-sm mt-6 text-center">Already have an account? <Link to={'/login'}><a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1">Signin here</a></Link></p>
-        {
-            success && <p className="text-4xl text-green-600">{success}</p>
-        }
+        
         {
             error && <p className="text-red-600">{error}</p>
         }
       </div>
+      <ToastContainer />
     </div>
     );
 };

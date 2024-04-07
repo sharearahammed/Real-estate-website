@@ -1,8 +1,8 @@
-import { FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../Authconfiguration/Authconfiguration';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { FaGithub } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,6 +11,7 @@ const Login = () => {
 
     const { signUpUser,setUser,GoogleSignIn,GitHubSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [showPassword ,  setShowPassword] = useState(false);
 
   const handleGoogleSignIn = () =>{
     GoogleSignIn()
@@ -49,13 +50,13 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error.message);
-        toast.error("The password that you entered is Incorrect")
+        toast.error("The password that you entered is Incorrect ")
       });
   };
 
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen ">
             <ToastContainer />
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
@@ -76,16 +77,14 @@ const Login = () => {
               />
             </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
+            <div className="relative">
+              <label className="text-sm mb-2 block">Password</label>
+              <input className="  bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" 
+              type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required />
+                <span className="absolute top-11 right-2" onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <FaEye /> : <FaEyeSlash />}
+                    </span>
+              </div>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
