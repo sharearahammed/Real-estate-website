@@ -8,6 +8,7 @@ import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
 import UserProfile from "../Components/UserProfile/UserProfile";
 import PrivatePortes from "../Components/PrivatePortes/PrivatePortes";
 import Home from "../Components/Home/Home";
+import Viewproperty from "../Components/ResidentialCard/Viewproperty";
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         {
             path:"/userprofile",
             element: <PrivatePortes><UserProfile></UserProfile></PrivatePortes>
+        },
+        {
+            path:"/viewproperty/:id",
+            element: <PrivatePortes><Viewproperty></Viewproperty></PrivatePortes>
         },
       ]
     },

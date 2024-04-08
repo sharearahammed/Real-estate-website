@@ -9,8 +9,15 @@ const AuthConfiguration = ({children}) => {
     const auth = getAuth(app);
     const [user , setUser] = useState(null);
     const [loading , setLoading] = useState(true);
+    const [cards, setCards] = useState([]);
     const googleProvider = new GoogleAuthProvider();
   const gitHubprovider = new GithubAuthProvider();
+
+  useEffect(() => {
+    fetch("/residential.json")
+      .then((res) => res.json())
+      .then((data) => setCards(data));
+  }, []);
 
   const GoogleSignIn = () => {
     return signInWithPopup(auth, googleProvider)
@@ -43,7 +50,7 @@ const AuthConfiguration = ({children}) => {
         } ;
     },[])
 
-    const authInfo = {GitHubSignIn,GoogleSignIn,setUser,user,loading,createUser,signUpUser,logOut};
+    const authInfo = {cards,GitHubSignIn,GoogleSignIn,setUser,user,loading,createUser,signUpUser,logOut};
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

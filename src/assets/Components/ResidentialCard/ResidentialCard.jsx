@@ -3,9 +3,10 @@
 import { FaChartArea } from "react-icons/fa";
 import { ImCoinDollar, ImLocation2 } from "react-icons/im";
 import { MdOutlineNotificationsActive } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ResidentialCard = ({card}) => {
-    const {image,estate_title,view_property_button,segment_name,price,status,area,location} = card;
+    const {image,estate_title,view_property_button,segment_name,price,status,area,location,id} = card;
     return (
         <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl lg:w-96 transition-all duration-700 lg:hover:scale-105 lg:hover:border-blue-500 hover:shadow-2xl border">
   <div
@@ -43,11 +44,13 @@ const ResidentialCard = ({card}) => {
     </div>
   </div>
   <div className="p-6 pt-0">
+    <Link to={`/viewproperty/${id}`}>
     <button
       className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-[#BC986B] text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 hover:bg-secondary-content hover:text-[#31323C] hover:border hover:border-[#31323C] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
       type="button">
       {view_property_button}
     </button>
+    </Link>
   </div>
 </div>
     );

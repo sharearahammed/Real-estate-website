@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+
+import { useContext } from "react";
 import ResidentialCard from "./ResidentialCard";
+import { AuthContext } from "../Authconfiguration/Authconfiguration";
 
 const ResidentialCards = () => {
-  const [cards, setCards] = useState([]);
-  useEffect(() => {
-    fetch("/residential.json")
-      .then((res) => res.json())
-      .then((data) => setCards(data));
-  }, []);
+
+    const {cards} = useContext(AuthContext)
+
   return (
     <div className="mt-20">
         <div className="mb-6">
