@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Authconfiguration/Authconfiguration";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../../../firebase.config";
+import { CgProfile } from "react-icons/cg";
 
 const UpdateProfile = () => {
     const {user} = useContext(AuthContext);
@@ -28,7 +29,7 @@ const UpdateProfile = () => {
             <h1 className="mb-16 text-3xl font-bold">Update Profile</h1>
             <div className="grid items-center grid-cols-4">
                 <div className="col-span-2">
-                    <img  className="rounded-full h-[300px] w-[300px]" src="https://www.irishtimes.com/resizer/mSBJBg5J4U2lY-PB6qSBn1PM3XE=/1024x0/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/irishtimes/3MS3PYEKJI2N533Z3ZG6VJ2RKU.jpg" alt="" />
+                    <img  className="rounded-full h-[300px] w-[300px]" src={user.photoURL} alt="" />
                 </div>
                 <div>
                 <div className="  ">
@@ -63,14 +64,14 @@ const UpdateProfile = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-semibold">Upload your picture</span>
+                <span className="label-text font-semibold">Photo URL</span>
               </label>
               <input
-                type="file"
+                type="text"
                 name="upload"
                 placeholder=""
-                className=" "
-                
+                className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control mt-6">

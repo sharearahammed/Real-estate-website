@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
 
     const {createUser} = useContext(AuthContext)
-    const [success , setSuccess] = useState('');
     const [error , setError] = useState('');
     const [showPassword ,  setShowPassword] = useState(false);
 
@@ -20,13 +19,12 @@ const Register = () => {
         const password = e.target.password.value;
         // const cpassword = e.target.cpassword.value;
         const accepcted = e.target.terms.checked;
-        const upload = e.target.upload.value;
-        console.log(name,email,password,upload,accepcted)
+        // const upload = e.target.upload.value;
+        console.log(name,email,password,accepcted)
 
         // reset error
         setError('')
         // reset success
-        setSuccess('')
 
         // validation
         if(password.length < 6){
@@ -50,13 +48,12 @@ const Register = () => {
         createUser(email,password)
         .then(result =>{
             console.log(result.user)
-            setSuccess('User Created Successfully')
             toast.success("User Create Successfully")
             
             // Update profile
             updateProfile(result.user,{
               displayName: name,
-              photoURL: upload
+              // photoURL: upload
           })
           .then(()=> console.log('profile updated'))
           .catch()
@@ -96,10 +93,6 @@ const Register = () => {
               <label className="text-sm mb-2 block">Confirm Password</label>
               <input name="cpassword" type="password" className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" placeholder="Enter confirm password" />
             </div> */}
-            <div>
-              <label className="text-sm mb-2 block">Upload your Photo</label>
-              <input name="upload" type="file" className="bg-white w-full text-sm px-4 py-3 rounded-md outline-blue-500" />
-            </div>
             <div className="flex items-center">
               <input id="remember-me" name="terms" type="checkbox" className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
               <label className="ml-3 block text-sm">

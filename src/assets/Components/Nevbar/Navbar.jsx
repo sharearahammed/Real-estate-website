@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Authconfiguration/Authconfiguration";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const {user,logOut} = useContext(AuthContext);
@@ -62,7 +63,9 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <Link to={'/'} className="btn btn-ghost lg:text-3xl lg:font-bold">Opulent Escapes</Link>
+    <div>
+    <Link to={'/'} className="btn btn-ghost text-[10px] lg:text-3xl lg:font-bold">Opulent Escapes</Link>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -73,12 +76,20 @@ const Navbar = () => {
 
   {
       user ? <div className="flex items-center">
-        <p>{user.email}</p>
         <p><button onClick={logout} className="btn bg-red-600 text-white text-[8px] lg:text-[14px]">Sign Out</button></p></div>
-      : <Link to={'/login'}><a className="btn bg-[#23BE0A] text-white text-[8px] lg:text-[14px]">Sign In</a></Link>
+      : <Link className="btn bg-[#23BE0A] text-white text-[8px] lg:text-[14px]" to={'/login'}>Sign In</Link>
     }
-    <Link to={'/register'}><a className="btn bg-[#59C6D2] text-white text-[8px] lg:text-[14px]">Sign Up</a></Link>
+    <Link className="btn bg-[#59C6D2] text-white text-[8px] lg:text-[14px]" to={'/register'}>Sign Up</Link>
   </div>
+  {
+    user ? <div className="hover:tooltip hover:tooltip-open hover:tooltip-bottom w-20 " data-tip={user.displayName}>
+    <img className="rounded-full" alt="Tailwind CSS Navbar component" src={user.photoURL} />
+  </div>
+  :
+  <div className="w-20 rounded-full">
+    <img className="h-[40px] w-[40px]" alt="Tailwind CSS Navbar component" src="https://i.ibb.co/P1V0nsx/Frame-5.png" />
+  </div>
+  }
 </div>
   );
 };
