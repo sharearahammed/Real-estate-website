@@ -7,6 +7,7 @@ import Contact from "../Components/Contact/Contact";
 import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
 import UserProfile from "../Components/UserProfile/UserProfile";
 import PrivatePortes from "../Components/PrivatePortes/PrivatePortes";
+import Home from "../Components/Home/Home";
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       element: <Root></Root>,
       errorElement: <ErrorPage></ErrorPage>,
       children:[
+        {
+            path: "/",
+            element:<Home></Home>
+        },
         {
             path: "/login",
             element:<Login></Login>
