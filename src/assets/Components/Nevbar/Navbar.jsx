@@ -21,7 +21,9 @@ const Navbar = () => {
                       : ""
                   } to={"./"}>Home</NavLink></li>
 
-    <li><NavLink className={({ isActive, isPending }) =>
+{
+  user && <>
+      <li><NavLink className={({ isActive, isPending }) =>
                     isActive
                       ? "text-[#BC986B] border border-[#BC986B]"
                       : isPending
@@ -35,6 +37,8 @@ const Navbar = () => {
                       ? "pending"
                       : ""
                   } to={"./userprofile"}>User Profile</NavLink></li>
+  </>
+}
                       <li><NavLink className={({ isActive, isPending }) =>
                       isActive
                         ? "text-[#BC986B] border border-[#BC986B]"
