@@ -1,0 +1,80 @@
+[
+  {
+    "image": "https://i.ibb.co/bXs9kDK/Single-Family-Home.jpg",
+    "estate_title": "Cozy Family Retreat",
+    "id": "1",
+    "segment_name": "Single Family Home",
+    "description": "A charming single-family home nestled in a peaceful neighborhood, featuring spacious interiors and a private backyard oasis.",
+    "price": "$350,000",
+    "status": "sale",
+    "area": "2,500 sq ft",
+    "location": "Suburbia Heights",
+    "facilities": ["Spacious Living Room", "Modern Kitchen", "Backyard Garden"],
+    "view_property_button": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/bKzXZm4/Urban-Townhouse-Living.jpg",
+    "estate_title": "Urban Townhouse Living",
+    "id": "2",
+    "segment_name": "Townhouse",
+    "description": "Stylish townhouse living in the heart of the city, offering contemporary design, rooftop terrace, and easy access to amenities.",
+    "price": "$2,500/month",
+    "status": "rent",
+    "area": "1,800 sq ft",
+    "location": "Downtown District",
+    "facilities": ["Open Concept Layout", "Rooftop Terrace", "Fitness Center"],
+    "view_property_button": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/d0BNd5N/Apartment.jpg",
+    "estate_title": "Modern Urban Retreat",
+    "id": "3",
+    "segment_name": "Apartment",
+    "description": "Sleek and modern apartment living in a vibrant urban setting, boasting panoramic city views and top-notch amenities.",
+    "price": "$500,000",
+    "status": "sale",
+    "area": "1,200 sq ft",
+    "location": "Metro Central",
+    "facilities": ["Floor-to-Ceiling Windows", "Swimming Pool", "24/7 Concierge"],
+    "view_property_button": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/RyB6wrc/Student-Housing.jpg",
+    "estate_title": "Student Haven",
+    "id": "4",
+    "segment_name": "Student Housing",
+    "description": "Purpose-built student accommodation offering modern comforts and a supportive community environment conducive to academic success.",
+    "price": "$800/month",
+    "status": "rent",
+    "area": "900 sq ft",
+    "location": "University District",
+    "facilities": ["Study Rooms", "Fitness Center", "Common Area Lounge"],
+    "view_property_button": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/NNJhKJL/Senior-Living-Community.webp",
+    "estate_title": "Retirement Haven",
+    "id": "5",
+    "segment_name": "Senior Living Community",
+    "description": "Elegant senior living community offering a range of amenities and services tailored to enhance quality of life and promote well-being.",
+    "price": "$3,500/month",
+    "status": "rent",
+    "area": "1,500 sq ft",
+    "location": "Sunset Meadows",
+    "facilities": ["Gourmet Dining", "Wellness Center", "Social Activities"],
+    "view_property_button": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/k58Dk2y/Vacation-Rental.jpg",
+    "estate_title": "Seaside Escape",
+    "id": "6",
+    "segment_name": "Vacation Rental",
+    "description": "Escape to a tranquil seaside retreat, offering breathtaking ocean views and luxurious amenities for the perfect getaway.",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "1,000 sq ft",
+    "location": "Coastal Paradise",
+    "facilities": ["Private Beach Access", "Spa Facilities", "Outdoor Dining Area"],
+    "view_property_button": "View Property"
+  }
+]
