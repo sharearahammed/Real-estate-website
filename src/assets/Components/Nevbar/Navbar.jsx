@@ -20,26 +20,7 @@ const Navbar = () => {
                       ? "pending"
                       : ""
                   } to={"./"}>Home</NavLink></li>
-
-{
-  user && <>
-      <li><NavLink className={({ isActive, isPending }) =>
-                    isActive
-                      ? "text-[#BC986B] border border-[#BC986B]"
-                      : isPending
-                      ? "pending"
-                      : ""
-                  } to={"./updateprofile"}>Update Profile </NavLink></li>
   <li><NavLink className={({ isActive, isPending }) =>
-                    isActive
-                      ? "text-[#BC986B] border border-[#BC986B]"
-                      : isPending
-                      ? "pending"
-                      : ""
-                  } to={"./userprofile"}>User Profile</NavLink></li>
-  </>
-}
-                      <li><NavLink className={({ isActive, isPending }) =>
                       isActive
                         ? "text-[#BC986B] border border-[#BC986B]"
                         : isPending
@@ -53,6 +34,26 @@ const Navbar = () => {
                         ? "pending"
                         : ""
                     } to={"./contact"}>Contact</NavLink></li>
+
+{
+  user && <>
+    <li><NavLink className={({ isActive, isPending }) =>
+                    isActive
+                      ? "text-[#BC986B] border border-[#BC986B]"
+                      : isPending
+                      ? "pending"
+                      : ""
+                  } to={"./userprofile"}>User Profile</NavLink></li>
+      <li><NavLink className={({ isActive, isPending }) =>
+                    isActive
+                      ? "text-[#BC986B] border border-[#BC986B]"
+                      : isPending
+                      ? "pending"
+                      : ""
+                  } to={"./updateprofile"}>Update Profile </NavLink></li>
+
+  </>
+}
 
   </>
   return (
@@ -77,22 +78,27 @@ const Navbar = () => {
   </div>
   <div className="navbar-end md:navbar-end lg:navbar-end lg:flex lg:gap-4">
 
-  {
-      user ? <div className="flex items-center">
-        <p><button onClick={logout} className="btn bg-red-600 text-white text-[8px] lg:text-[14px]">Sign Out</button></p></div>
-      : <Link className="btn bg-[#BC986B] hover:bg-yellow-400 text-white text-[8px] lg:text-[14px]" to={'/login'}>Sign In</Link>
-    }
-    <Link className="btn bg-[#BC986B] hover:bg-yellow-400 text-white text-[8px] lg:text-[14px]" to={'/register'}>Sign Up</Link>
-  </div>
+  
   {
     user ? <div className="hover:tooltip hover:tooltip-open hover:tooltip-bottom w-20 " data-tip={user.displayName}>
-    <img className="rounded-full" alt="Tailwind CSS Navbar component" src={user.photoURL} />
+    <img className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] lg:h-[60px] lg:w-[60px] rounded-full" alt="Tailwind CSS Navbar component" src={user.photoURL} />
   </div>
   :
   <div className="w-20 rounded-full">
     <img className="h-[40px] w-[40px]" alt="Tailwind CSS Navbar component" src="https://i.ibb.co/P1V0nsx/Frame-5.png" />
   </div>
   }
+  
+  <div className="flex items-center">
+  {
+      user ? <div className="flex items-center">
+        <p><button onClick={logout} className="btn bg-red-600 text-white text-[8px] lg:text-[14px]">Sign Out</button></p></div>
+      : <Link className="btn bg-[#BC986B] hover:bg-yellow-400 text-white text-[8px] lg:text-[14px]" to={'/login'}>Sign In</Link>
+    }
+    <div><Link className="btn bg-[#BC986B] hover:bg-yellow-400 text-white text-[8px] lg:text-[14px]" to={'/register'}>Sign Up</Link></div>
+  </div>
+  </div>
+  
 </div>
   );
 };

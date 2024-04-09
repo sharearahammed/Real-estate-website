@@ -6,6 +6,7 @@ import { useContext, useState } from 'react';
 import { FaGithub } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 
@@ -57,6 +58,10 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen ">
+          <Helmet>
+        <title>Opulent Escapes Login Page</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
             <ToastContainer />
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">

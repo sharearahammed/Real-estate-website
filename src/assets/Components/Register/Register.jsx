@@ -5,6 +5,7 @@ import { AuthContext } from "../Authconfiguration/Authconfiguration";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -67,6 +68,10 @@ const Register = () => {
 
     return (
         <div className="flex flex-col justify-center font-[sans-serif] text-[#333] sm:h-screen p-4">
+          <Helmet>
+        <title>Opulent Escapes Regester Page</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="max-w-md w-full mx-auto border border-gray-300 rounded-md p-6">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold">Please Signup</h1>

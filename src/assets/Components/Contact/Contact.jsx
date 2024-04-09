@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl mb-16">
+        <div className="card lg:card-side bg-base-100 shadow-xl mb-16 max-w-7xl mx-auto">
       <Helmet>
         <title>Opulent Escapes Contact</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
