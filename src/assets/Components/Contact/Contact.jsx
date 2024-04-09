@@ -10,13 +10,13 @@ const Contact = () => {
       <figure>
         <img
           className="h-[750px] w-[600px]"
-          src="https://i.ibb.co/VLcwg6g/ashley-byrd-KVby0-S0-Ga-H4-unsplash.jpg"
+          src="https://i.ibb.co/c3d0470/josh-wilburne-Tc-BSi3q-Hn80-unsplash.jpg"
           alt="Album"
         />
       </figure>
       <div className="card-body">
         <h2 className="text-3xl card-title">Get in Touch</h2>
-        <p>Welcome to Book Vibe, where stories come alive! Whether you are seeking literary <br/> adventures, educational resources, or simply a cozy reading nook, we are here to <br/> serve your bibliophilic needs. Have a question,suggestion, or just want to say hello?<br/> Drop us a line using the form below, or connect with us via phone or email. We love<br/>  hearing from fellow book enthusiasts like you!</p>
+        <p>Get in touch with us at Opulent Escapes for any questions,<br/> inquiries, or to schedule a visit. Our friendly team is dedicated to assisting<br/> you in finding your ideal home. Whether you prefer reaching out by phone,<br/> email, or in person, we are here to help. Connect with us today and discover<br/> the unmatched living experience awaiting you at our community.</p>
 
         <div className="overflow-x-auto">
   <table className="table">
@@ -41,6 +41,11 @@ const Contact = () => {
         <td>Address:</td>
         <td>Dhaka,Bangladesh</td>
       </tr>
+      {/* row 4 */}
+      <tr className="bg-base-200">
+        <td>Office Hours:</td>
+        <td>9:00 AM to 5:00 PM</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -58,7 +63,7 @@ const Contact = () => {
 
 </div>
 <div className="card-actions justify-end">
-      <button className="btn btn-primary">Send</button>
+      <button className="btn bg-[#BC986B] text-white">Send</button>
     </div>
     
       </div>

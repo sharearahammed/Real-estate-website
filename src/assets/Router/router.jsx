@@ -9,6 +9,7 @@ import UserProfile from "../Components/UserProfile/UserProfile";
 import PrivatePortes from "../Components/PrivatePortes/PrivatePortes";
 import Home from "../Components/Home/Home";
 import Viewproperty from "../Components/ResidentialCard/Viewproperty";
+import About from "../Components/About/About";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         {
             path: "/contact",
             element:<Contact></Contact>
+        },
+        {
+            path: "/about",
+            element: <About></About>
         },
         {
             path:"/updateprofile",

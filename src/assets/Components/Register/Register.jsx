@@ -28,13 +28,14 @@ const Register = () => {
         // reset success
 
         // validation
-        if(password.length < 6){
+        if(password.length < 7){
             setError('Password should be 6 charecters or longer')
             return;
         }
         const pattern = /^(?=.*[A-Z])(?=.*[a-z]).+$/;
         if(!pattern.test(password)){
-            setError('Password must contain at least one uppercase and one lowercase letter.')
+            setError('Password must contain at least one uppercase and one lowercase letter.');
+            return;
         }
         // if(password !== cpassword){
         //     setError('Passwords do not match')

@@ -30,9 +30,9 @@ const UpdateProfile = () => {
         <title>Opulent Escapes Update Profile</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <h1 className="mb-16 text-center text-3xl font-bold">Update Profile</h1>
+      <h1 className="mb-16 underline text-center text-3xl font-bold">Update Profile</h1>
       <div className="grid items-center grid-cols-1 lg:grid-cols-4">
-        <div className="col-span-2">
+        <div className="col-span-2 flex items-center justify-center">
           {
             user && <img
             className="rounded-full h-[300px] w-[300px]"
@@ -41,11 +41,8 @@ const UpdateProfile = () => {
           />
           }
         </div>
-        <div>
-          <div className="  ">
-            <div className="flex-col">
-              <div className="text-center lg:text-left"></div>
-              <div className="card shrink-0 w-full max-w-sm">
+
+              <div className="flex flex-col justify-center card shrink-0 w-96 max-w-sm">
                 <form onSubmit={handleUpdate} className="">
                   <div className="form-control">
                     <label className="label">
@@ -79,7 +76,7 @@ const UpdateProfile = () => {
                     <input
                       type="text"
                       name="upload"
-                      placeholder=""
+                      placeholder="Give your profile pic url link"
                       className="input input-bordered"
                       required
                     />
@@ -90,11 +87,8 @@ const UpdateProfile = () => {
                 </form>
                 <div className="flex flex-col p-2 gap-2"></div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 
