@@ -42,7 +42,7 @@ const UpdateProfile = () => {
           }
         </div>
 
-              <div className="flex flex-col justify-center card shrink-0 w-96 max-w-sm">
+              <div className="flex flex-col justify-center card shrink-0 lg:w-96 max-w-sm">
                 <form onSubmit={handleUpdate} className="">
                   <div className="form-control">
                     <label className="label">

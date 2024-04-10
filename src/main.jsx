@@ -7,6 +7,10 @@ import {
 import router from './assets/Router/router.jsx';
 import AuthConfiguration from './assets/Components/Authconfiguration/Authconfiguration.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

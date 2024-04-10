@@ -2,14 +2,16 @@ import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl mb-16 max-w-7xl mx-auto">
+        <div className="lg:mt-16 ">
+          <h1 className="mb-6 lg:mb-16 text-xl md:text-2xl lg:text-5xl font-bold text-center">Contact Us</h1>
+          <div className="card lg:card-side bg-base-100 shadow-xl mb-16 max-w-7xl mx-auto">
       <Helmet>
         <title>Opulent Escapes Contact</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <figure>
         <img
-          className="h-[750px] w-[600px]"
+          className="lg:h-[750px] lg:w-[600px]"
           src="https://i.ibb.co/c3d0470/josh-wilburne-Tc-BSi3q-Hn80-unsplash.jpg"
           alt="Album"
         />
@@ -58,16 +60,17 @@ const Contact = () => {
 </label>
     </div>
     <div>
-  <textarea className="textarea textarea-bordered" placeholder="Bio"></textarea>
+  <textarea className="textarea textarea-bordered" placeholder="Write here"></textarea>
   </div>
 
 </div>
 <div className="card-actions justify-end">
-      <button className="btn bg-[#BC986B] text-white">Send</button>
+      <button className="btn hover:bg-slate-500 bg-[#BC986B] text-white">Send</button>
     </div>
     
       </div>
     </div>
+        </div>
     );
 };
 
