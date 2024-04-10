@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
-        <div className="lg:mt-16 ">
+        <div className="mt-20 ">
           <h1 className="mb-6 lg:mb-16 text-xl md:text-2xl lg:text-5xl font-bold text-center">Contact Us</h1>
           <div className="card lg:card-side bg-base-100 shadow-xl mb-16 max-w-7xl mx-auto">
       <Helmet>

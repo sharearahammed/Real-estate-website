@@ -1,6 +1,12 @@
+import { Helmet } from "react-helmet-async";
+
 const Portal = () => {
   return (
     <div className="mt-32">
+        <Helmet>
+        <title>Opulent Escapes Portal</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="border bg-[#BC986B] text-white p-8 text-3xl font-bold mb-16">
         <h1 className="text-center">Opulent Escapes Portal</h1>
       </div>

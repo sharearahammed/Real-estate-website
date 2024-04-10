@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
-    <div>
+    <div className="mt-20">
       <Helmet>
         <title>Opulent Escapes About</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
@@ -29,7 +29,7 @@ const About = () => {
 {/* one */}
       <div data-aos="fade-right"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="border rounded-xl p-16 mt-6 lg:mt-24  max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
+     data-aos-easing="ease-in-sine" className="border rounded-xl p-8 lg:p-16 mt-6 lg:mt-24  max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
         <div className="lg:col-span-2"><img className="lg:h-[500px] lg:w-[400px] rounded-lg" src="https://i.ibb.co/G3ZS2qw/bernard-hermant-CLKGGw-IBTa-Y-unsplash.jpg" alt="" /></div>
         <div>
             <p>
@@ -40,7 +40,7 @@ const About = () => {
       {/* two */}
       <div data-aos="fade-right"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="border rounded-xl p-16 mt-6 lg:mt-24  max-w-4xl mx-auto lg:grid grid-cols-3 items-center justify-center">
+     data-aos-easing="ease-in-sine" className="border rounded-xl p-8 lg:p-16 mt-6 lg:mt-24  max-w-4xl mx-auto lg:grid grid-cols-3 items-center justify-center">
         <div className="lg:col-span-2"><img className="lg:h-[500px] lg:w-[400px] rounded-lg" src="https://i.ibb.co/MB9fkNH/ryan-parker-ucn-ZANGmyx-M-unsplash.jpg" alt="" /></div>
         <div>
             <p>
@@ -51,7 +51,7 @@ const About = () => {
       {/* three */}
       <div data-aos="fade-right"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="border rounded-xl p-16 mt-6 lg:mt-24  max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
+     data-aos-easing="ease-in-sine" className="border rounded-xl p-8 lg:p-16 mt-6 lg:mt-24  max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
         <div className="lg:col-span-2"><img className="lg:h-[500px] lg:w-[400px] rounded-lg" src="https://i.ibb.co/D4n4jqc/mika-baumeister-PL7-K02i4s9g-unsplash.jpg" alt="" /></div>
         <div>
             <p>
@@ -62,7 +62,7 @@ const About = () => {
       {/* four */}
       <div data-aos="fade-right"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="border rounded-xl p-16 mt-6 lg:mt-24 max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
+     data-aos-easing="ease-in-sine" className="border rounded-xl p-8 lg:p-16 mt-6 lg:mt-24 max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
         <div className="lg:col-span-2"><img className="lg:h-[500px] lg:w-[400px] rounded-lg" src="https://i.ibb.co/HP3wXYj/ivan-ramirez-2-Vh-VKr7-Qbv-E-unsplash.jpg" alt="" /></div>
         <div>
             <p>
@@ -73,7 +73,7 @@ const About = () => {
       {/* five */}
       <div data-aos="fade-right"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="border rounded-xl p-16 mt-6 lg:mt-24  max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
+     data-aos-easing="ease-in-sine" className="border rounded-xl p-8 lg:p-16 mt-6 lg:mt-24  max-w-4xl mx-auto grid lg:grid-cols-3 items-center justify-center">
         <div className="lg:col-span-2"><img className="lg:h-[500px] lg:w-[400px] rounded-lg" src="https://i.ibb.co/94zB6w2/armin-djuhic-mc-L2f-J74-GY-unsplash.jpg" alt="" /></div>
         <div>
             <p>

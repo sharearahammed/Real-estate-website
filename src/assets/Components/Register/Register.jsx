@@ -21,8 +21,8 @@ const Register = () => {
     const password = e.target.password.value;
     // const cpassword = e.target.cpassword.value;
     const accepcted = e.target.terms.checked;
-    // const upload = e.target.upload.value;
-    console.log(name, email, password, accepcted);
+    const upload = e.target.upload.value;
+    console.log(name,upload, email, password, accepcted);
 
     // reset error
     setError("");
@@ -65,7 +65,7 @@ const Register = () => {
         // Update profile
         updateProfile(result.user, {
           displayName: name,
-          // photoURL: upload
+          photoURL: upload
         })
           .then(() => console.log("profile updated"))
           .catch();
@@ -79,7 +79,7 @@ const Register = () => {
   };
 
   return (
-    <div className="mt-7 flex flex-col justify-center font-[sans-serif] text-[#333] sm:h-screen p-4">
+    <div className="mt-16 flex flex-col justify-center font-[sans-serif] text-[#333] sm:h-screen p-4">
       <Helmet>
         <title>Opulent Escapes Regester Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
@@ -97,8 +97,10 @@ const Register = () => {
                 type="text"
                 className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 placeholder="Enter name"
+                required
               />
             </div>
+            
             <div>
               <label className="text-sm mb-2 block">Email</label>
               <input
@@ -106,8 +108,20 @@ const Register = () => {
                 type="text"
                 className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 placeholder="Enter email"
+                required
               />
             </div>
+
+            <div>
+              <label className="text-sm mb-2 block">Photo Url</label>
+              <input
+                name="upload"
+                type="text"
+                className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
+                placeholder="Give your photo url"
+              />
+            </div>
+            
             <div className="relative">
               <label className="text-sm mb-2 block">Password</label>
               <input

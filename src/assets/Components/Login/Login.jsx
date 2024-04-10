@@ -58,7 +58,7 @@ const Login = () => {
 
 
     return (
-        <div className="mt-7 hero min-h-screen ">
+        <div className="mt-16 lg:mt-16 hero min-h-screen ">
           <Helmet>
         <title>Opulent Escapes Login Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
@@ -66,7 +66,7 @@ const Login = () => {
             <ToastContainer />
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Please Login now!</h1>
+          <h1 className="text-xl md:text-3xl lg:text-5xl font-bold">Please Login now!</h1>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleLogin} className="card-body">
