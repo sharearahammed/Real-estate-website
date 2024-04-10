@@ -25,6 +25,7 @@ const Login = () => {
         console.error("error", error.message)
     })
   }
+
   const handleGithubSignIn = () =>{
     GitHubSignIn()
     .then(result =>{
@@ -57,7 +58,7 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen ">
+        <div className="mt-7 hero min-h-screen ">
           <Helmet>
         <title>Opulent Escapes Login Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />

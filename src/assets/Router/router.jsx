@@ -10,6 +10,7 @@ import PrivatePortes from "../Components/PrivatePortes/PrivatePortes";
 import Home from "../Components/Home/Home";
 import Viewproperty from "../Components/ResidentialCard/Viewproperty";
 import About from "../Components/About/About";
+import Portal from "../Components/Portal/Portal";
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
             path:"/viewproperty/:id",
             element: <PrivatePortes><Viewproperty></Viewproperty></PrivatePortes>
         },
+        {
+            path: '/portal',
+            element: <PrivatePortes><Portal></Portal></PrivatePortes>
+        }
       ]
     },
   ]);

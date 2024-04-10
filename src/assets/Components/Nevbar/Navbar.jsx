@@ -51,13 +51,20 @@ const Navbar = () => {
                       ? "pending"
                       : ""
                   } to={"./updateprofile"}>Update Profile </NavLink></li>
+        <li><NavLink className={({ isActive, isPending }) =>
+                      isActive
+                        ? "text-[#BC986B] border border-[#BC986B]"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    } to={"./portal"}>Portal</NavLink></li>
 
   </>
 }
 
   </>
   return (
-    <div className="mb-7 navbar bg-base-100">
+    <div className="mx-auto navbar bg-base-100 flex-no-wrap fixed top-0 right-0 left-0 z-10 flex">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
