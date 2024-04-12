@@ -52,7 +52,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error.message);
-        toast.error("The password that you entered is Incorrect ")
+        toast.error("The email or password that you entered is Incorrect ")
       });
   };
 

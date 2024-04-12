@@ -1,8 +1,20 @@
-# React + Vite
+# Opulent Escapes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to My Opulent Escapes Website!
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can visit the live site [here](https://opulent-escapes.web.app).
+
+## Features and Characteristics
+
+- User-friendly interface: Our website offers an intuitive and easy-to-navigate interface, ensuring a smooth user experience for visitors of all levels.
+- Responsive design: My Opulent Escapes Website is fully responsive, providing optimal viewing and interaction across various devices and screen sizes.
+- Property Listings: Detailed listings of available properties, including photos, descriptions, and pricing.
+- User Accounts: Options for users to create and login accounts.
+- Privacy and Security: Measures to protect users' personal information and ensure secure online transactions.
+
+## npm package name which I have used 
+- [AOS Package](https://www.npmjs.com/package/aos)
+- [Animate.css](https://animate.style/)
+- [Swiper slider](https://swiperjs.com/)
