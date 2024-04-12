@@ -22,7 +22,7 @@ const Register = () => {
     // const cpassword = e.target.cpassword.value;
     const accepcted = e.target.terms.checked;
     const upload = e.target.upload.value;
-    console.log(name,upload, email, password, accepcted);
+    console.log(name, upload, email, password, accepcted);
 
     // reset error
     setError("");
@@ -49,13 +49,6 @@ const Register = () => {
       return;
     }
 
-    //Logout
-    logOut()
-    .then()
-    .catch(error=>{
-      console.log(error.message)
-    })
-
     // Create user
     createUser(email, password)
       .then((result) => {
@@ -65,37 +58,45 @@ const Register = () => {
         // Update profile
         updateProfile(result.user, {
           displayName: name,
-          photoURL: upload
+          photoURL: upload,
         })
           .then(() => console.log("profile updated"))
           .catch();
+        //Logout
+        logOut()
+          .then()
+          .catch((error) => {
+            console.log(error.message);
+          });
       })
       .catch((error) => {
         console.error(error.meggase);
         setError(error.meggase);
       });
 
-      navigate('/login')
+    navigate("/login");
   };
 
   return (
-    <div style={{
-      backgroundImage:
-        "url(https://i.ibb.co/61xDmfr/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg)",
-    }} className="min-h-screen mt-16 flex flex-col justify-center font-[sans-serif] text-[#333] sm:h-screen p-4">
+    <div
+      style={{
+        backgroundImage:
+          "url(https://i.ibb.co/L1j3pgJ/erik-mclean-Q1-Gkffhfy6-M-unsplash.jpg)",
+      }}
+      className="bg-cover mt-16 flex flex-col justify-center font-[sans-serif] text-[#333] sm:h-screen p-4"
+    >
       <Helmet>
         <title>Opulent Escapes Regester Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold">Please Signup</h1>
-        </div>
+        <h1 className="text-3xl font-bold">Please Signup</h1>
+      </div>
       <div className="max-w-md w-full mx-auto border border-gray-300 rounded-md p-6">
-        
         <form onSubmit={handleSignup}>
           <div className="space-y-6">
             <div>
-              <label className="text-sm mb-2 block">Name</label>
+              <label className="text-sm mb-2 block text-gray-400">Name</label>
               <input
                 name="name"
                 type="text"
@@ -104,9 +105,9 @@ const Register = () => {
                 required
               />
             </div>
-            
+
             <div>
-              <label className="text-sm mb-2 block">Email</label>
+              <label className="text-gray-400 text-sm mb-2 block">Email</label>
               <input
                 name="email"
                 type="text"
@@ -117,7 +118,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="text-sm mb-2 block">Photo Url</label>
+              <label className="text-gray-400 text-sm mb-2 block">Photo Url</label>
               <input
                 name="upload"
                 type="text"
@@ -125,9 +126,9 @@ const Register = () => {
                 placeholder="Give your photo url"
               />
             </div>
-            
+
             <div className="relative">
-              <label className="text-sm mb-2 block">Password</label>
+              <label className="text-gray-400 text-sm mb-2 block">Password</label>
               <input
                 className="  bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 type={showPassword ? "text" : "password"}
@@ -153,11 +154,11 @@ const Register = () => {
                 type="checkbox"
                 className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
               />
-              <label className="ml-3 block text-sm">
+              <label className="text-white ml-3 block text-sm">
                 I accept the{" "}
                 <a
                   href="javascript:void(0);"
-                  className="text-blue-600 font-semibold hover:underline ml-1"
+                  className="text-[#2563EB] font-semibold hover:underline ml-1"
                 >
                   Terms and Conditions
                 </a>
@@ -170,7 +171,7 @@ const Register = () => {
             </button>
           </div>
         </form>
-        <p className="text-sm mt-6 text-center">
+        <p className="text-white text-sm mt-6 text-center">
           Already have an account?{" "}
           <Link to={"/login"}>
             <a

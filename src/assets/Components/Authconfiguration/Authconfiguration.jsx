@@ -10,6 +10,7 @@ const AuthConfiguration = ({children}) => {
     const [user , setUser] = useState(null);
     const [loading , setLoading] = useState(true);
     const [cards, setCards] = useState([]);
+    const [reload , setReload] = useState(false);
     const googleProvider = new GoogleAuthProvider();
   const gitHubprovider = new GithubAuthProvider();
 
@@ -48,9 +49,9 @@ const AuthConfiguration = ({children}) => {
         return () =>{
             unSubscribe();
         } ;
-    },[])
+    },[reload])
 
-    const authInfo = {cards,GitHubSignIn,GoogleSignIn,setUser,user,loading,createUser,signUpUser,logOut};
+    const authInfo = {cards,setReload,GitHubSignIn,GoogleSignIn,setUser,user,loading,createUser,signUpUser,logOut};
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

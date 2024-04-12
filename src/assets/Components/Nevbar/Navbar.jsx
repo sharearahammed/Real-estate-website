@@ -197,18 +197,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className=" w-10 rounded-full" data-tip="hello">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://i.ibb.co/P1V0nsx/Frame-5.png"
-                />
-              </div>
-            </div>
+            
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -248,9 +237,9 @@ const Navbar = () => {
           <div>
             <Link
               className="btn bg-[#BC986B] hover:bg-yellow-400 text-white text-[8px] lg:text-[14px]"
-              to={"/register"}
+              to={"/login"}
             >
-              Sign Up
+              Sign In
             </Link>
           </div>
         </div>

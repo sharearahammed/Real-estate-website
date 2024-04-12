@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 
-    const { signUpUser,setUser,GoogleSignIn,GitHubSignIn } = useContext(AuthContext);
+    const { setReload,signUpUser,setUser,GoogleSignIn,GitHubSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const [showPassword ,  setShowPassword] = useState(false);
 
@@ -49,6 +49,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         navigate("/");
+        setReload(true)
       })
       .catch((error) => {
         console.error(error.message);
@@ -60,8 +61,8 @@ const Login = () => {
     return (
         <div style={{
           backgroundImage:
-            "url(https://i.ibb.co/61xDmfr/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg)",
-        }} className="mt-16 lg:mt-16 hero min-h-screen">
+            "url(https://i.ibb.co/D4LGLzY/jared-brashier-Doddr-Xp-Lw3-A-unsplash.jpg)",
+        }} className="mt-16 hero min-h-screen">
           <div className="hero-overlay bg-opacity-60"></div>
           <Helmet>
         <title>Opulent Escapes Login Page</title>
@@ -70,7 +71,7 @@ const Login = () => {
             <ToastContainer />
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
-          <h1 className="text-xl md:text-3xl lg:text-5xl font-bold">Please Login now!</h1>
+          <h1 className="text-white text-xl md:text-3xl lg:text-5xl font-bold">Please Login now!</h1>
         </div>
         <div className="border card shrink-0 w-full max-w-sm shadow-2xl bg-transparent">
           <form onSubmit={handleLogin} className="card-body">
@@ -108,7 +109,7 @@ const Login = () => {
               Do not have an account? Please{" "}
               <Link
                 to={"/register"}
-                className="hover:underline text-blue-800 underline font-semibold"
+                className="hover:underline text-blue-400 underline font-semibold"
               >
                 Signup
               </Link>
