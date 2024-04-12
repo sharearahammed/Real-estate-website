@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import ResidentialCards from "../ResidentialCard/ResidentialCards";
 import Categories from "../Categories Section/Categories";
+import Review from "../Review/Review";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <div className="max-w-7xl mx-auto">
             <ResidentialCards></ResidentialCards>
             <Categories></Categories>
+            <Review></Review>
             </div>
 
         </div>

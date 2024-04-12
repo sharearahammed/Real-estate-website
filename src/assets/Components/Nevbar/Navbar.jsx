@@ -1,6 +1,10 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Authconfiguration/Authconfiguration";
+import { GrLogin } from "react-icons/gr";
+import { SlLogout } from "react-icons/sl";
+import { CgProfile } from "react-icons/cg";
+import { MdBrowserUpdated } from "react-icons/md";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -131,12 +135,12 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div>
+        <div className="flex">
           <Link
             to={"/"}
-            className="btn btn-ghost text-[10px] lg:text-3xl lg:font-bold"
+            className="btn btn-ghost text-[10px] md:text-2xl lg:text-2xl lg:font-bold mr-20"
           >
-            Opulent Escapes
+            Opulent <span className="text-[#BC986B]">Escapes</span>
           </Link>
         </div>
       </div>
@@ -165,25 +169,28 @@ const Navbar = () => {
               {user && (
                 <li>
                   <Link to={"/userprofile"} className="justify-between">
-                    Profile
+                  <CgProfile />Profile
                     <span className="badge">New</span>
                   </Link>
                 </li>
               )}
               {user && (
                 <li>
-                  <Link to={"/updateprofile"}>Update Profile</Link>
+                  <Link to={"/updateprofile"}><MdBrowserUpdated />Update Profile</Link>
                 </li>
               )}
               <li>
                 {user ? (
                   <div className="flex items-center hover:text-red-600 hover:font-bold">
                     <p>
-                      <button onClick={logout}>Sign Out</button>
+                    <button onClick={logout}><div className="flex items-center gap-2">
+                        <div><SlLogout /></div>
+                        <div>Sign Out</div>
+                        </div></button>
                     </p>
                   </div>
                 ) : (
-                  <Link to={"/login"}>Sign In</Link>
+                  <Link to={"/login"}><GrLogin /> Sign In</Link>
                 )}
               </li>
             </ul>
@@ -223,11 +230,14 @@ const Navbar = () => {
                 {user ? (
                   <div className="flex items-center hover:text-red-600 hover:font-bold">
                     <p>
-                      <button onClick={logout}>Sign Out</button>
+                      <button onClick={logout}><div className="flex">
+                        <div><SlLogout /></div>
+                        <div>Sign Out</div>
+                        </div></button>
                     </p>
                   </div>
                 ) : (
-                  <Link to={"/login"}>Sign In</Link>
+                  <Link to={"/login"}><GrLogin />Sign In</Link>
                 )}
               </li>
             </ul>

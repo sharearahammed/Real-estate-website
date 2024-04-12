@@ -17,7 +17,8 @@ const About = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="lg:px-[350px] lg:py-[150px]">
         <div className=" border-4 px-16 py-8  text-center text-neutral-content">
-          <div className="max-w-md">
+          <div className="max-w-md" data-aos="fade-right"
+          data-aos-duration="2000">
             <h1 className="text-left mb-5 text-6xl font-bold">About Us</h1>
             <p className="mb-5 text-left">
             Welcome to Opulent Escapes, where luxury meets community. Located in Dhaka,Bangladesh, our mission is to redefine modern living through innovation and sustainability. With a focus on exceptional service, our homes offer comfort and convenience, inviting you to experience the joy of coming home.

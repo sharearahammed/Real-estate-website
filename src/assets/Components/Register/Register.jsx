@@ -79,15 +79,19 @@ const Register = () => {
   };
 
   return (
-    <div className="mt-16 flex flex-col justify-center font-[sans-serif] text-[#333] sm:h-screen p-4">
+    <div style={{
+      backgroundImage:
+        "url(https://i.ibb.co/61xDmfr/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg)",
+    }} className="min-h-screen mt-16 flex flex-col justify-center font-[sans-serif] text-[#333] sm:h-screen p-4">
       <Helmet>
         <title>Opulent Escapes Regester Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <div className="max-w-md w-full mx-auto border border-gray-300 rounded-md p-6">
-        <div className="text-center mb-12">
+      <div className="text-center mb-12">
           <h1 className="text-3xl font-bold">Please Signup</h1>
         </div>
+      <div className="max-w-md w-full mx-auto border border-gray-300 rounded-md p-6">
+        
         <form onSubmit={handleSignup}>
           <div className="space-y-6">
             <div>

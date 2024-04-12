@@ -58,7 +58,11 @@ const Login = () => {
 
 
     return (
-        <div className="mt-16 lg:mt-16 hero min-h-screen ">
+        <div style={{
+          backgroundImage:
+            "url(https://i.ibb.co/61xDmfr/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg)",
+        }} className="mt-16 lg:mt-16 hero min-h-screen">
+          <div className="hero-overlay bg-opacity-60"></div>
           <Helmet>
         <title>Opulent Escapes Login Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
@@ -68,31 +72,31 @@ const Login = () => {
         <div className="text-center lg:text-left">
           <h1 className="text-xl md:text-3xl lg:text-5xl font-bold">Please Login now!</h1>
         </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="border card shrink-0 w-full max-w-sm shadow-2xl bg-transparent">
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text text-white">Email</span>
               </label>
-              <input
+              <input 
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered border-white bg-transparent"
                 required
               />
             </div>
             <div className="form-control">
             <div className="relative">
-              <label className="text-sm mb-2 block">Password</label>
-              <input className="  bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" 
+              <label className="text-sm mb-2 block text-white">Password</label>
+              <input className="bg-transparent border border-whites w-full text-sm px-4 py-3 rounded-md outline-blue-500" 
               type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required />
                 <span className="absolute top-11 right-2" onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
                     </span>
               </div>
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <a href="#" className="text-white label-text-alt link link-hover">
                   Forgot password?
                 </a>
               </label>
@@ -100,11 +104,11 @@ const Login = () => {
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
-            <p>
+            <p className='text-white'>
               Do not have an account? Please{" "}
               <Link
                 to={"/register"}
-                className="hover:underline text-blue-600 font-semibold"
+                className="hover:underline text-blue-800 underline font-semibold"
               >
                 Signup
               </Link>

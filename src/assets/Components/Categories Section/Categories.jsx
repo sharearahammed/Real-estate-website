@@ -7,7 +7,7 @@ const Categories = () => {
         <h1 className="lg:ml-28 text-[#BC986B] flex items-center gap-2  "><FaCircle /><span className="text-xl lg:text-5xl font-semibold text-black underline">Categories</span></h1>
         </div>
       <div className="grid grid-cols-1 lg:grid-cols-5 lg:h-96">
-        <div className="lg:col-span-3 relative flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 mt-24">
+        <div className="lg:col-span-3 relative flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 mt-24 " data-aos="zoom-in-right" data-aos-duration="3000">
           <img
             className="absolute inset-0 h-full w-full object-cover"
             src="https://i.ibb.co/hVFKH0P/single-fam.jpg"
@@ -23,7 +23,7 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="lg:ml-24 lg:col-span-2 relative flex flex-col justify-center it overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mt-24">
+        <div className="lg:ml-24 lg:col-span-2 relative flex flex-col justify-center it overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mt-24" data-aos="zoom-in-right" data-aos-duration="3000">
           <img
             className="absolute inset-0 h-full w-full object-cover"
             src="https://i.ibb.co/m8HdB1z/townhouses.jpg"
@@ -40,7 +40,7 @@ const Categories = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 lg:h-96">
-        <div className="relative flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 mt-24">
+        <div className="relative flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 mt-24" data-aos="zoom-in-right" data-aos-duration="3000">
           <img
             className="absolute inset-0 h-full w-full object-cover"
             src="https://i.ibb.co/whCpZQ2/apartments.jpg"
@@ -55,7 +55,7 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className="relative flex flex-col justify-center it overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mt-24">
+        <div className="relative flex flex-col justify-center it overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mt-24" data-aos="zoom-in-right" data-aos-duration="3000">
           <img
             className="absolute inset-0 h-full w-full object-cover"
             src="https://i.ibb.co/HrYpqZ6/studenthousing.jpg"
@@ -69,7 +69,7 @@ const Categories = () => {
             5 Properties
           </div>
         </div>
-        <div className="relative flex flex-col justify-center it overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mt-24">
+        <div className="relative flex flex-col justify-center it overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mt-24" data-aos="zoom-in-right" data-aos-duration="3000">
           <img
             className="absolute inset-0 h-full w-full object-cover"
             src="https://i.ibb.co/t47z2C5/senior-living-communities.jpg"
