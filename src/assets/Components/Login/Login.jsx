@@ -114,16 +114,16 @@ const Login = () => {
               </Link>
             </p>
             <hr />
-            <h3 className="text-2xl text-center font-semibold">Or</h3>
+            <h3 className="mt-2 text-white text-2xl text-center font-semibold"> Or</h3>
             
           </form>
           <div className='flex flex-col p-2 gap-2'>
           <button onClick={handleGoogleSignIn} className="btn">
-            <p className='text-xl flex items-center gap-3'><img className='h-7 w-7' src="../../../../public/google.svg" alt="" />
+            <p className='text-xl flex items-center gap-3'><img className='h-7 w-7' src="/google.svg" alt="" />
               Google</p>
             </button>
             <button onClick={handleGithubSignIn} className="btn">
-            <p className='text-xl flex items-center gap-3'><img className='h-7 w-7' src="../../../../public/github.svg" alt="" />
+            <p className='text-xl flex items-center gap-3'><img className='h-7 w-7' src="/github.svg" alt="" />
             Github</p>
             
             </button>
