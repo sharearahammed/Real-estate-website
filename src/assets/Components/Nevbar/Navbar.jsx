@@ -17,11 +17,11 @@ const Navbar = () => {
   };
   const links = (
     <>
-      <li>
+      <li className="text-[#BC986B]">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-[#BC986B] border border-[#BC986B]"
+              ? "text-gray-400 border border-[#BC986B]"
               : isPending
               ? "pending"
               : ""
@@ -31,11 +31,11 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
+      <li className="text-[#BC986B]">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-[#BC986B] border border-[#BC986B]"
+              ? "text-gray-400 border border-[#BC986B]"
               : isPending
               ? "pending"
               : ""
@@ -45,11 +45,11 @@ const Navbar = () => {
           About
         </NavLink>
       </li>
-      <li>
+      <li className="text-[#BC986B]">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-[#BC986B] border border-[#BC986B]"
+              ? "text-gray-400 border border-[#BC986B]"
               : isPending
               ? "pending"
               : ""
@@ -62,11 +62,11 @@ const Navbar = () => {
 
       {user && (
         <>
-          <li>
+          <li className="text-[#BC986B]">
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
-                  ? "text-[#BC986B] border border-[#BC986B]"
+                  ? "text-gray-300 border border-[#BC986B]"
                   : isPending
                   ? "pending"
                   : ""
@@ -76,11 +76,11 @@ const Navbar = () => {
               User Profile
             </NavLink>
           </li>
-          <li>
+          <li className="text-[#BC986B]">
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
-                  ? "text-[#BC986B] border border-[#BC986B]"
+                  ? "text-gray-700 border border-[#BC986B]"
                   : isPending
                   ? "pending"
                   : ""
@@ -90,11 +90,11 @@ const Navbar = () => {
               Update Profile{" "}
             </NavLink>
           </li>
-          <li>
+          <li className="text-[#BC986B]">
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
-                  ? "text-[#BC986B] border border-[#BC986B]"
+                  ? "text-gray-700 border border-[#BC986B]"
                   : isPending
                   ? "pending"
                   : ""
@@ -109,10 +109,10 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="lg:px-[120px] navbar bg-base-100 flex-no-wrap fixed top-0 right-0 left-0 z-10 flex">
+    <div className="md:bg-gradient-to-r md:from-black md:to-white shadow-5-strong lg:bg-gradient-to-r from-black to-white shadow-5-strong lg:px-[120px] navbar bg-base-100 flex-no-wrap fixed top-0 right-0 left-0 z-10 flex">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="md:text-white btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -135,10 +135,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className="flex">
+        <div className=" md:text-whitelg:text-white flex">
           <Link
             to={"/"}
-            className="btn btn-ghost text-[10px] md:text-2xl lg:text-2xl lg:font-bold mr-20"
+            className="btn btn-ghost hover:bg-stone-500 text-[10px] md:text-2xl lg:text-2xl lg:font-bold mr-20"
           >
             Opulent <span className="text-[#BC986B]">Escapes</span>
           </Link>
@@ -241,7 +241,7 @@ const Navbar = () => {
           :
           <div>
             <Link
-              className="btn bg-[#BC986B] hover:bg-yellow-400 text-white text-[8px] lg:text-[14px]"
+              className="btn bg-[#BC986B] hover:bg-slate-400 text-white text-[8px] lg:text-[14px]"
               to={"/login"}
             >
               Sign In

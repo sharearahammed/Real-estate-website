@@ -14,7 +14,7 @@ const UserProfile = () => {
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
   return (
-    <div className="mt-20">
+    <div className="mt-20 mb-7">
       
       <h1 className="text-3xl font-semibold underline text-center">Profile</h1>
       <div className="p-4 max-w-2xl mx- sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">

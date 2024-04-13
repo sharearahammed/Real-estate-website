@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-[69px]">
       <Helmet>
         <title>Opulent Escapes About</title>
         <link rel="canonical" href="https://www.tacobell.com/" />

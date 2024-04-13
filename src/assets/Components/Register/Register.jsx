@@ -124,6 +124,7 @@ const Register = () => {
                 type="text"
                 className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 placeholder="Give your photo url"
+                required
               />
             </div>
 

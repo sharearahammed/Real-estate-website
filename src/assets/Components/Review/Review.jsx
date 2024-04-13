@@ -16,11 +16,11 @@ const Review = () => {
             className="relative inline-block h-[58px] w-[58px] !rounded-full  object-cover object-center"
           />
           <div className="flex w-full flex-col gap-0.5">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between">
               <h5 className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
               Sharear Ahammed
               </h5>
-              <div className="flex items-center gap-0 5">
+              <div className="flex items-center gap-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -83,7 +83,7 @@ const Review = () => {
             className="relative inline-block h-[58px] w-[58px] !rounded-full  object-cover object-center"
           />
           <div className="flex w-full flex-col gap-0.5">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between">
               <h5 className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                 Sanjana Tonni
               </h5>
@@ -150,7 +150,7 @@ const Review = () => {
             className="relative inline-block h-[58px] w-[58px] !rounded-full  object-cover object-center"
           />
           <div className="flex w-full flex-col gap-0.5">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between">
               <h5 className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
               Nabil Ahmed
               </h5>

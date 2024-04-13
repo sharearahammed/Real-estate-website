@@ -26,7 +26,7 @@ const UpdateProfile = () => {
       });
   };
   return (
-    <div className="max-w-4xl mx-auto mt-20">
+    <div className="max-w-4xl mx-auto mt-20 mb-8">
       <Helmet>
         <title>Opulent Escapes Update Profile</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
