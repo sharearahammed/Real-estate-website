@@ -5,7 +5,7 @@ import app from "../../../firebase.config";
 import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
-  const { user } = useContext(AuthContext);
+  const { user,setReload } = useContext(AuthContext);
   const auth = getAuth(app);
 
   const handleUpdate = (e) => {
@@ -19,13 +19,14 @@ const UpdateProfile = () => {
     })
       .then(() => {
         alert("updated");
+        setReload(true);
       })
       .catch((error) => {
         console.error(error.message);
       });
   };
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto mt-20">
       <Helmet>
         <title>Opulent Escapes Update Profile</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
@@ -76,7 +77,7 @@ const UpdateProfile = () => {
                     <input
                       type="text"
                       name="upload"
-                      placeholder="Give your profile pic url link"
+                      placeholder={user.photoURL}
                       className="input input-bordered"
                       required
                     />

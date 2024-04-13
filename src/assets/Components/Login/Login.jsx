@@ -1,9 +1,8 @@
-import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../Authconfiguration/Authconfiguration';
 import { useContext, useState } from 'react';
-import { FaGithub } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { Helmet } from 'react-helmet-async';
@@ -83,16 +82,16 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input input-bordered border-white bg-transparent"
+                className="text-white bg-transparent border border-whites w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                 required
               />
             </div>
             <div className="form-control">
             <div className="relative">
               <label className="text-sm mb-2 block text-white">Password</label>
-              <input className="bg-transparent border border-whites w-full text-sm px-4 py-3 rounded-md outline-blue-500" 
+              <input className="text-white bg-transparent border border-whites w-full text-sm px-4 py-3 rounded-md outline-blue-500" 
               type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required />
-                <span className="absolute top-11 right-2" onClick={() => setShowPassword(!showPassword)}>
+                <span className="text-white absolute top-11 right-2" onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
                     </span>
               </div>
@@ -120,11 +119,11 @@ const Login = () => {
           </form>
           <div className='flex flex-col p-2 gap-2'>
           <button onClick={handleGoogleSignIn} className="btn">
-            <p className='text-xl flex items-center gap-3'><FaGoogle />
+            <p className='text-xl flex items-center gap-3'><img className='h-7 w-7' src="../../../../public/google.svg" alt="" />
               Google</p>
             </button>
             <button onClick={handleGithubSignIn} className="btn">
-            <p className='text-xl flex items-center gap-3'><FaGithub />
+            <p className='text-xl flex items-center gap-3'><img className='h-7 w-7' src="../../../../public/github.svg" alt="" />
             Github</p>
             
             </button>

@@ -234,6 +234,11 @@ const Navbar = () => {
         )}
 
         <div className="flex items-center">
+          {
+            user ? <div onClick={logout} className="btn bg-red-600 text-white text-[8px] lg:text-[14px]">
+              Sign Out
+          </div>
+          :
           <div>
             <Link
               className="btn bg-[#BC986B] hover:bg-yellow-400 text-white text-[8px] lg:text-[14px]"
@@ -242,6 +247,7 @@ const Navbar = () => {
               Sign In
             </Link>
           </div>
+          }
         </div>
       </div>
     </div>

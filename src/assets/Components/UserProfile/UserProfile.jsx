@@ -9,18 +9,19 @@ const UserProfile = () => {
   const handleGoBack = () =>{
     navigate(-1)
   }
-  return (
-    <div>
-      <Helmet>
+  <Helmet>
         <title>Opulent Escapes User Profile</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
+  return (
+    <div className="mt-20">
+      
       <h1 className="text-3xl font-semibold underline text-center">Profile</h1>
-      <div className="max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
+      <div className="p-4 max-w-2xl mx- sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
         <div className="rounded-t-lg h-32 overflow-hidden">
           <img
             className="object-cover object-top w-full"
-            src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+            src="https://i.ibb.co/bgyZgcw/How-to-Add-a-Profile-Photo-on-Linked-In-1024x684.jpg"
             alt=""
           />
         </div>
@@ -34,9 +35,10 @@ const UserProfile = () => {
           />
           }
         </div>
-        <div className="text-center mt-2">
+        <div className="break-all text-center mt-2">
           {user && <h2 className="mb-4 text-xl font-semibold">Name: {user.displayName}</h2>}
           {user && <p className="mb-4 text-gray-500">Email: {user.email}</p>}
+          {user && <p className="mb-4 text-gray-500">photoURL Link : {user.photoURL}</p>}
         </div>
         <div className="p-4 border-t mx-8 mt-2">
           <button onClick={handleGoBack} className="w-1/2 block mx-auto rounded-full bg-gray-900 hover:shadow-lg font-semibold text-white px-6 py-2">
